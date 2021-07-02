@@ -95,12 +95,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
   align-items: center;
-  color: var(--color-white);
   padding: 16px;
+  background-color: transparent;
+  color: var(--color-white);
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  padding: 8px;
 }
 
 .navbar__menu {
@@ -110,6 +118,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: white;
 }
 
 .navbar__menu__item {
@@ -151,7 +160,7 @@ p {
 }
 
 .home__title,
-.home__decription {
+.home__description {
   color: var(--color-white);
 }
 
